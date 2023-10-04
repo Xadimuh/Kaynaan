@@ -109,6 +109,8 @@ struct SecondPage: View {
                         .padding(.bottom, 16)
                 }
             }
+            .navigationBarTitle("") // Masquer le titre de la barre de navigation
+                .navigationBarHidden(true) 
             
         }
         //.navigationBarTitle("")
