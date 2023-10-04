@@ -13,14 +13,14 @@ struct ContentView: View {
                 
                 VStack(alignment: .center) {
                 
-                    Text("Stay Hydrated with KAYNAAN")
+                    Text("STAY HYDRATED WITH KAYNAAN")
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding([.top, .leading], 3)
                         .frame(width: 400.0)
 
                     // Texte en bas de l'image
-                    Text("Remember to drink water regularly \n to stay \n hydrated and healthy.\n")
+                    Text("Remember to drink water regularlyto stay \n hydrated and healthy.\n")
                         .font(.footnote)
                         .foregroundColor(.gray)
                         .padding([.top, .bottom, .trailing])
