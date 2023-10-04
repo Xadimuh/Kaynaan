@@ -109,10 +109,11 @@ struct SecondPage: View {
                         .padding(.bottom, 16)
                 }
             }
-            //.navigationBarTitle("")
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true) // Cacher le bouton "Back"
+            
         }
+        //.navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true) // Cacher le bouton "Back"
     }
     
     // Fonction de calcul de la quantité d'eau recommandée en millilitres en fonction des informations personnelles
