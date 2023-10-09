@@ -9,7 +9,7 @@ struct SecondPage: View {
     @State private var bedtime = Date()
     @State private var wakeUpTime = Date()
     @State private var recommendedWaterIntake = 0.0
-    
+    @ObservedObject var userData: UserData // Utilisez l'objet UserData
     var body: some View {
         NavigationView {
             VStack {HStack {
@@ -79,7 +79,18 @@ struct SecondPage: View {
                     }
                 }
                 
-                Button(action: {
+                NavigationLink(
+                    destination: AccueilPage(userData: userData), // Passez userData à AccueilPage
+                    label: {
+                        Text("NEXT")
+                            .font(.title3)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color(UIColor(red: 51/255, green: 73/255, blue: 92/255, alpha: 1.0)))
+                            .cornerRadius(10)
+                    }
+                )
+                .simultaneousGesture(TapGesture().onEnded {
                     // Appel de la fonction de calcul de la quantité d'eau recommandée
                     let userWeight = Double(weight) ?? 0.0
                     let userHeight = Double(height) ?? 0.0
@@ -89,17 +100,10 @@ struct SecondPage: View {
                     let wakeUpTimeComponents = calendar.dateComponents([.hour, .minute], from: wakeUpTime)
                     let userBedtime = Double(bedtimeComponents.hour ?? 0) + Double(bedtimeComponents.minute ?? 0) / 60.0
                     let userWakeUpTime = Double(wakeUpTimeComponents.hour ?? 0) + Double(wakeUpTimeComponents.minute ?? 0) / 60.0
-                    
-                    recommendedWaterIntake = calculateWaterIntake(weightInKg: userWeight, heightInCm: userHeight, ageInYears: userAge, bedtimeInHours: userBedtime, wakeUpTimeInHours: userWakeUpTime, gender: gender)
-                }) {
-                    Text("NEXT")
-                        .font(.title3)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color(UIColor(red: 51/255, green: 73/255, blue: 92/255, alpha: 1.0)))
-                        .cornerRadius(10)
-                }
+                    userData.recommendedWaterIntake = calculateWaterIntake(weightInKg: userWeight, heightInCm: userHeight, ageInYears: userAge, bedtimeInHours: userBedtime, wakeUpTimeInHours: userWakeUpTime, gender: gender)
+                })
                 .padding()
+                
                 
                 Spacer()
                 
@@ -139,10 +143,12 @@ struct SecondPage: View {
         
         return waterIntake
     }
+    
 }
 
 struct SecondPage_Previews: PreviewProvider {
     static var previews: some View {
-        SecondPage()
+        SecondPage(userData: UserData()) // Créez une instance de UserData ici
     }
 }
+

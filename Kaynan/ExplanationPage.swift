@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ExplanationPage: View {
     @State private var isShowingLoginPage = false
-
+    @ObservedObject var userData: UserData
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
@@ -55,7 +55,7 @@ struct ExplanationPage: View {
 
                     // Bouton pour rediriger vers la page de connexion
                     NavigationLink(
-                       destination: SecondPage(), // Assurez-vous d'avoir importé la vue LoginPage
+                       destination: SecondPage(userData: userData), // Assurez-vous d'avoir importé la vue LoginPage
                         isActive: $isShowingLoginPage,
                         label: {
                             Text("Start now")
@@ -80,10 +80,9 @@ struct ExplanationPage: View {
     }
 }
 
-// ... (ContentView_Previews reste inchangé)
 
 struct ExplanationPage_Previews: PreviewProvider {
     static var previews: some View {
-        ExplanationPage()
+        ExplanationPage(userData: UserData()) // Créez une instance de UserData ici
     }
 }

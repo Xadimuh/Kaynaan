@@ -6,3 +6,7 @@
 //
 
 import Foundation
+struct WaterRecord: Codable {
+    let date: Date
+    let amount: Double
+}

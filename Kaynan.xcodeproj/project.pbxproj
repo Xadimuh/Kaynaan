@@ -17,6 +17,11 @@
 		B0F7B4A82AC84183006E13D4 /* Kaynan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0F7B4A62AC84183006E13D4 /* Kaynan.xcdatamodeld */; };
 		B0F7B4AF2AC86C36006E13D4 /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F7B4AE2AC86C36006E13D4 /* Presentation.swift */; };
 		B0F7B4B32AC8B2C6006E13D4 /* ExplanationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F7B4B22AC8B2C6006E13D4 /* ExplanationPage.swift */; };
+		EE70CDCF2AD373C900A1AD92 /* AddDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70CDCE2AD373C900A1AD92 /* AddDrink.swift */; };
+		EE70CDD92AD472A300A1AD92 /* WaterRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70CDD82AD472A300A1AD92 /* WaterRecord.swift */; };
+		EE70CDDB2AD473FF00A1AD92 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70CDDA2AD473FF00A1AD92 /* History.swift */; };
+		EE9AA52A2AD4A2D000586194 /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9AA5292AD4A2D000586194 /* Profil.swift */; };
+		EED4D6C72AD0A9270073A17A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED4D6C62AD0A9270073A17A /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		B0F7B4A72AC84183006E13D4 /* Kaynan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kaynan.xcdatamodel; sourceTree = "<group>"; };
 		B0F7B4AE2AC86C36006E13D4 /* Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
 		B0F7B4B22AC8B2C6006E13D4 /* ExplanationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationPage.swift; sourceTree = "<group>"; };
+		EE70CDCE2AD373C900A1AD92 /* AddDrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrink.swift; sourceTree = "<group>"; };
+		EE70CDD82AD472A300A1AD92 /* WaterRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRecord.swift; sourceTree = "<group>"; };
+		EE70CDDA2AD473FF00A1AD92 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		EE9AA5292AD4A2D000586194 /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
+		EED4D6C62AD0A9270073A17A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,11 @@
 				B0F7B4B22AC8B2C6006E13D4 /* ExplanationPage.swift */,
 				B01A0E2A2ACD4B4500B7FD92 /* AddInformation.swift */,
 				B01A0E2C2ACD4CF600B7FD92 /* AccueilPage.swift */,
+				EE9AA5292AD4A2D000586194 /* Profil.swift */,
+				EE70CDCE2AD373C900A1AD92 /* AddDrink.swift */,
+				EED4D6C62AD0A9270073A17A /* UserData.swift */,
+				EE70CDD82AD472A300A1AD92 /* WaterRecord.swift */,
+				EE70CDDA2AD473FF00A1AD92 /* History.swift */,
 			);
 			path = Kaynan;
 			sourceTree = "<group>";
@@ -113,7 +128,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					B0F7B4972AC84178006E13D4 = {
 						CreatedOnToolsVersion = 13.2;
@@ -158,11 +173,16 @@
 				B01A0E2B2ACD4B4500B7FD92 /* AddInformation.swift in Sources */,
 				B0F7B4A52AC84183006E13D4 /* Persistence.swift in Sources */,
 				B0F7B4A82AC84183006E13D4 /* Kaynan.xcdatamodeld in Sources */,
+				EE9AA52A2AD4A2D000586194 /* Profil.swift in Sources */,
+				EED4D6C72AD0A9270073A17A /* UserData.swift in Sources */,
 				B0F7B4B32AC8B2C6006E13D4 /* ExplanationPage.swift in Sources */,
 				B0F7B49E2AC84178006E13D4 /* ContentView.swift in Sources */,
+				EE70CDDB2AD473FF00A1AD92 /* History.swift in Sources */,
+				EE70CDCF2AD373C900A1AD92 /* AddDrink.swift in Sources */,
 				B0F7B4AF2AC86C36006E13D4 /* Presentation.swift in Sources */,
 				B0F7B49C2AC84178006E13D4 /* KaynanApp.swift in Sources */,
 				B01A0E2D2ACD4CF600B7FD92 /* AccueilPage.swift in Sources */,
+				EE70CDD92AD472A300A1AD92 /* WaterRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +226,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -220,7 +241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -267,6 +288,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -275,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,6 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaynan/Preview Content\"";
+				DEVELOPMENT_TEAM = LT6T77URW4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -301,6 +324,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaynan/Preview Content\"";
+				DEVELOPMENT_TEAM = LT6T77URW4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -330,6 +355,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
