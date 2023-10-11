@@ -14,6 +14,7 @@ struct AccueilPage: View {
     @State private var waterDrank: Double = 0.0
 
     var body: some View {
+        
         NavigationView {
             ZStack {
                 Color(UIColor(red: 0x9C / 255.0, green: 0xB3 / 255.0, blue: 0xC7 / 255.0, alpha: 1.0))
@@ -21,9 +22,9 @@ struct AccueilPage: View {
 
                 VStack {
                     HStack {
-                        Image("logo")
+                        Image("logo 3")
                             .resizable()
-                            .frame(width: 70, height: 70)
+                            .frame(width: 140, height: 140)
                             .padding()
                         Spacer()
                     }
@@ -108,8 +109,11 @@ struct AccueilPage: View {
                     }
                 }
             }
-            .navigationBarHidden(true)
+            
         }
+        //.navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true) // Cacher le bouton "Back"
     }
 
     struct AccueilPage_Previews: PreviewProvider {

@@ -26,10 +26,13 @@ struct HistoryView: View {
                 Spacer()
                 Text(String(format: "%.2f mL", record.amount))
             }
-        }
+        } //.navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true) // Cacher le bouton "Back"
         .navigationBarTitle("Historique")
     }
 }
+
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {

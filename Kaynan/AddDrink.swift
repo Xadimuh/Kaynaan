@@ -56,9 +56,13 @@ struct AddDrinkView: View {
                 
                 Spacer()
             }
-        }
+        } //.navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true) // Cacher le bouton "Back"
     }
+    
 }
+
 
 struct AddDrinkView_Previews: PreviewProvider {
     static var previews: some View {
