@@ -5,6 +5,7 @@ struct AccueilPage: View {
     @State private var isAddDrinkViewActive: Bool = false
     @State private var isDragging: Bool = false
     @State private var isHistoryViewActive: Bool = false
+    @State private var userAchievedGoal: Bool = false
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE"
@@ -14,14 +15,14 @@ struct AccueilPage: View {
     @State private var waterDrank: Double = 0.0
 
     var body: some View {
-        
-        NavigationView {
+//        NavigationView {
             ZStack {
+                
                 Color(UIColor(red: 0x9C / 255.0, green: 0xB3 / 255.0, blue: 0xC7 / 255.0, alpha: 1.0))
                     .edgesIgnoringSafeArea(.all)
 
-                VStack {
-                    HStack {
+                VStack  {
+                    HStack(spacing: 60) {
                         Image("logo 3")
                             .resizable()
                             .frame(width: 140, height: 140)
@@ -86,8 +87,15 @@ struct AccueilPage: View {
                     }
                     Text("\(String(format: "%.2f", waterDrank)) ml sur \(String(format: "%.2f", userData.recommendedWaterIntake)) ml")
                                             .font(.title2)
-                                            .padding(.bottom, 16)
-
+                                            .padding(.bottom, 86)
+                    if waterDrank >= userData.recommendedWaterIntake {
+                        Text("Félicitations, vous avez atteint votre objectif")
+                   
+                        .font(.title3)
+                        .padding(.bottom, 86)
+                    }
+                    Spacer()
+                    Spacer()
                     Spacer()
 
                     NavigationLink(
@@ -109,19 +117,21 @@ struct AccueilPage: View {
                     }
                 }
             }
-            
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
         }
         //.navigationBarTitle("")
-        .navigationBarHidden(true)
-        .navigationBarBackButtonHidden(true) // Cacher le bouton "Back"
+//        .navigationBarHidden(true)
+//        .navigationBarBackButtonHidden(true) // Cacher le bouton "Back"
     }
 
+     
     struct AccueilPage_Previews: PreviewProvider {
         static var previews: some View {
             AccueilPage(userData: UserData())
         }
     }
-}
+
 class WaterHistoryManager {
     static let shared = WaterHistoryManager()
 
